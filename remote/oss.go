@@ -14,6 +14,7 @@ type OdCookie struct {
 	Cookie    string    `json:"cookie"`
 	PickCode  string    `json:"pickCode"`
 	Name      string    `json:"name"`
+	User      uint64    `gorm:"index" json:"user"`
 }
 
 type OdPreviewResponse struct {

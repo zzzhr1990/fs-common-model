@@ -28,6 +28,9 @@ type OdPreviewResponse struct {
 	URL      string `json:"url"`
 	Tab      string `json:"tab"`
 	Type     string `json:"type"`
+	Msg      string `json:"msg"`
+	Errtype  string `json:"errtype"`
+	MsgCode  int    `json:"msg_code"`
 }
 
 type OdTokenResponse struct {

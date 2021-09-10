@@ -29,3 +29,19 @@ type OdPreviewResponse struct {
 	Tab      string `json:"tab"`
 	Type     string `json:"type"`
 }
+
+type OdTokenResponse struct {
+	StatusCode      string    `json:"StatusCode"`
+	AccessKeySecret string    `json:"AccessKeySecret"`
+	SecurityToken   string    `json:"SecurityToken"`
+	Expiration      time.Time `json:"Expiration"`
+	AccessKeyID     string    `json:"AccessKeyId"`
+}
+
+type OdToken struct {
+	StatusCode      string    `json:"statusCode"`
+	AccessKeySecret string    `json:"accessKeySecret"`
+	SecurityToken   string    `json:"securityToken"`
+	Expiration      time.Time `json:"expiration"`
+	AccessKeyID     string    `json:"accessKeyId"`
+}

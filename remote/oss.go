@@ -47,7 +47,8 @@ type OdToken struct {
 }
 
 type OdUserResponse struct {
-	State bool `json:"state"`
+	State bool   `json:"state"`
+	Error string `json:"error"`
 	Data  struct {
 		Device      int  `json:"device"`
 		Rank        int  `json:"rank"`
@@ -60,7 +61,6 @@ type OdUserResponse struct {
 		Forever     int  `json:"forever"`
 		IsPrivilege bool `json:"is_privilege"`
 		// "error":"\u8bf7\u5148\u767b\u5f55,\u540e\u64cd\u4f5c\uff01"
-		Error     string `json:"error"`
 		Privilege struct {
 			Start  int  `json:"start"`
 			Expire int  `json:"expire"`

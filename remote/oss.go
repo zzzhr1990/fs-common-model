@@ -59,7 +59,9 @@ type OdUserResponse struct {
 		Global      int  `json:"global"`
 		Forever     int  `json:"forever"`
 		IsPrivilege bool `json:"is_privilege"`
-		Privilege   struct {
+		// "error":"\u8bf7\u5148\u767b\u5f55,\u540e\u64cd\u4f5c\uff01"
+		Error     string `json:"error"`
+		Privilege struct {
 			Start  int  `json:"start"`
 			Expire int  `json:"expire"`
 			State  bool `json:"state"`

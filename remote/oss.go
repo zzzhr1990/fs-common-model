@@ -72,6 +72,6 @@ type OdUserResponse struct {
 		} `json:"privilege"`
 		UserName string `json:"user_name"`
 		Face     string `json:"face"`
-		UserID   int    `json:"user_id"`
+		UserID   uint64 `json:"user_id"`
 	} `json:"data"`
 }

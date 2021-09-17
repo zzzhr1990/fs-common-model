@@ -68,7 +68,7 @@ type OdUserResponse struct {
 			Start  int  `json:"start"`
 			Expire int  `json:"expire"`
 			State  bool `json:"state"`
-			Mark   int  `json:"mark"`
+		//	Mark   int  `json:"mark"`
 		} `json:"privilege"`
 		UserName string `json:"user_name"`
 		Face     string `json:"face"`

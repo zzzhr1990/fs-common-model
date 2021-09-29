@@ -48,6 +48,7 @@ type SliceFileDetail struct {
 }
 
 type SliceFileInfo struct {
-	ID     string             `bson:"_id" json:"id"`
-	Detail []*SliceFileDetail `bson:"detail" json:"detail"`
+	ID       string             `bson:"_id" json:"id"`
+	Detail   []*SliceFileDetail `bson:"detail" json:"detail"`
+	FileSize int64              `json:"fileSize" bson:"fileSize"`
 }

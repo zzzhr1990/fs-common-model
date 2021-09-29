@@ -33,3 +33,21 @@ type FakeInfo struct {
 	Bucket         string    `json:"bucket" gorm:"type:varchar(80)"`
 	Key            string    `json:"key"`
 }
+
+type SliceFileDetail struct {
+	ID             int    `bson:"id" json:"id"`
+	StartOffset    int64  `bson:"startOffset" json:"startOffset"`
+	EndOffset      int64  `bson:"endOffset" json:"endOffset"`
+	NextOffset     int64  `bson:"nextOffset" json:"nextOffset"`
+	Size           int64  `bson:"size" json:"size"`
+	FakeHeaderHash string `json:"fakeHeaderHash" bson:"fakeHeaderHash"`
+	FakeHash       string `json:"fakeHash" bson:"fakeHash"`
+	FakeSize       int64  `json:"fakeSize" bson:"fakeSize"`
+	Bucket         string `json:"bucket" bson:"bucket"`
+	Key            string `json:"key" bson:"key"`
+}
+
+type SliceFileInfo struct {
+	ID     string             `bson:"_id" json:"id"`
+	Detail []*SliceFileDetail `bson:"detail" json:"detail"`
+}

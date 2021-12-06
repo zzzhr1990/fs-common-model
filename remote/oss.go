@@ -12,9 +12,10 @@ type OdCookie struct {
 	CreatedAt time.Time `json:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"`
 	Cookie    string    `json:"cookie"`
-	PickCode  string    `json:"pickCode"`
-	Name      string    `json:"name"`
-	User      uint64    `gorm:"index" json:"user"`
+	// PickCode  string    `json:"pickCode"`
+	Name string `json:"name"`
+	User uint64 `gorm:"uniqueIndex" json:"user"`
+	Zone uint64 `gorm:"index" json:"zone"`
 }
 
 type OdPreviewResponse struct {
